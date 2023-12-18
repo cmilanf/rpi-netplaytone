@@ -30,6 +30,9 @@ The solution is so simple that there is not an actual installation setup:
 # Uninstall
 If you used `sudo make install`, you can uninstall the solution with `sudo make uninstall`.
 
+# Video
+[![Video of a Raspberry Pi playing TON files](https://img.youtube.com/vi/6jjUNOervsY/0.jpg)](https://www.youtube.com/watch?v=6jjUNOervsY)
+
 # License
 This software, except the Synchronet BBS tone files located in the `sbbstone`, is licensed under MIT License.
 
