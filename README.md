@@ -8,24 +8,24 @@ The solution doesn't implement yet the full [TON file syntax](https://gitlab.syn
 # The solution
 Following files are part of the solution:
 
-    1. `playtone.bash`. Bash script that plays frequency based TON files using WiringPi `gpio` command line utility.
-    2. `rpi-netplaytone.py`. A Python program that brings up a webserver for accepting requests that plays TON files. It calls the `playtone.bash` script.
-    3. `rpi-netplaytone.service`. systemd unit file to install the service. **Modify this file `gpio-pin` parameter to match the one you are using in your Raspberry Pi**.
-    4. `Makefile`. A simple Makefile to install and uninstall the service. It assumes [systemd](https://systemd.io/) is init.
+  1. `playtone.bash`. Bash script that plays frequency based TON files using WiringPi `gpio` command line utility.
+  2. `rpi-netplaytone.py`. A Python program that brings up a webserver for accepting requests that plays TON files. It calls the `playtone.bash` script.
+  3. `rpi-netplaytone.service`. systemd unit file to install the service. **Modify this file `gpio-pin` parameter to match the one you are using in your Raspberry Pi**.
+  4. `Makefile`. A simple Makefile to install and uninstall the service. It assumes [systemd](https://systemd.io/) is init.
 
 # Installation
 **Please, double-check all parameters and operations for your Raspberry Pi. This software is provided AS IS and I will not take responsability if it causes damage to your PC Speaker, Raspberry Pi board or any other equipment.**
 
 The solution is so simple that there is not an actual installation setup:
 
-    1. Clone this repository.
-    2. Install the needed dependencies:
-        a. Python 3.9 or higher.
-        b. [WiringPi](https://github.com/WiringPi/WiringPi). This should provide the `gpio` command line tool.
-        c. `perl5`, `bc`, `tr` and `awk` command line tools.
-    3. Edit `rpi-netplaytone.service` and check the gpio pin configuration.
-    4. Edit `Makefile` and check the operations it performs are ok with your system, specially `systemd` related setup.
-    5. After everything has been checked, run `sudo make install`.
+  1. Clone this repository.
+  2. Install the needed dependencies:
+    a. Python 3.9 or higher.
+    b. [WiringPi](https://github.com/WiringPi/WiringPi). This should provide the `gpio` command line tool.
+    c. `perl5`, `bc`, `tr` and `awk` command line tools.
+  3. Edit `rpi-netplaytone.service` and check the gpio pin configuration.
+  4. Edit `Makefile` and check the operations it performs are ok with your system, specially `systemd` related setup.
+  5. After everything has been checked, run `sudo make install`.
 
 # Uninstall
 If you used `sudo make install`, you can uninstall the solution with `sudo make uninstall`.
