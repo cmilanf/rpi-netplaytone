@@ -1,0 +1,16 @@
+[Unit]
+Description=Raspberry Pi Net-Playtone - Listen HTTP request for playing PC Speakers tones
+After=network.target network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/rpi-netplaytone.py \
+    --gpio-pin 13 \
+    --playtone-script /usr/local/bin/playtone.bash \
+    --tone-path /usr/local/share/sbbstone/
+ExecStop=/usr/bin/gpio -g pwm 13 0
+Restart=on-failure
+RestartSec=300s
+User=pi
+
+[Install]
+WantedBy=multi-user.target
