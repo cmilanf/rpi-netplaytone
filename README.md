@@ -1,7 +1,7 @@
 # Raspberry Pi Network PC Speaker player
 When running a virtual machine, you probably lose the ability to play sound through the host PC Speaker, something that can be both, cool and useful. I used to play PC Speaker tones in [my Synchronet BBS, HispaMSX BBS](https://bbs.hispamsx.org), with the SysOP Pagging feature that trigged the `playtone` binary or [playtone.js](https://gitlab.synchro.net/main/sbbs/-/blob/master/exec/playtone.js?ref_type=heads) file to play [TON files](https://gitlab.synchro.net/main/sbbs/-/tree/master/exec/tone?ref_type=heads) converted from monophonic MIDI files.
 
-I am restoring this feature via a Rasspberry Pi, a PC Speaker connected to PWM enabled GPIO and a small web server coded in Python, so she is able to play tones via HTTP request.
+I am restoring this feature via a Raspberry Pi, a PC Speaker connected to PWM enabled GPIO and a small web server coded in Python, so she is able to play tones via HTTP request.
 
 The solution doesn't implement yet the full [TON file syntax](https://gitlab.synchro.net/main/sbbs/-/blob/master/exec/tone/example.ton?ref_type=heads), but many of them will work. Furthermore, as I was not able to get proper sound quality output with [RPi.GPIO Python module](https://pypi.org/project/RPi.GPIO/), I decided to use [WiringPi gpio command line utility](https://github.com/WiringPi/WiringPi).
 
